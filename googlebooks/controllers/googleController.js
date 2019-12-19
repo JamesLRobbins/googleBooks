@@ -4,7 +4,7 @@ const db = require("../models");
 module.exports = {
     findAll: function(req, res) {
         const { query: params } = req;
-        axios.get("https://www.googleapis.com/books/v1/volumes?q=" + params + "&key=AIzaSyC_7dqrqP2R8H9_A8SRPxI6Yi1VH74GZUU", {
+        axios.get("https://www.googleapis.com/books/v1/volumes?q=" + params, {
             
         })
         .then(results => results.data.items.filter(
